@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta charset="utf-8" />
+    <link href="https://restcountries.eu/rest/v2/all" rel="preconnect" />
+    <title>LearnGeo</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#2C8C99" />
+    <!-- include an external style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- include an external JavaScript file -->
+    <script src="myscript.js"></script>
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-startup-image" href="/icons/icon-192x192.png" />
+
+    <meta
+      name="Description"
+      content="A wiki app that allows you to research any country and has a trivia section to test your knowledge."
+    />
+  </head>
+
+  <body>
+    <!-- page content -->
+    <div id="lightbox" onclick="closeLightBox()">
+      <div id="message"></div>
+    </div>
+    <div id="startup"></div>
+    <span id="top"></span>
+    <div id="title">
+      <div id="headtitle">LearnGeo</div>
+    </div>
+
+    <div id="subtitle">
+      <a id="switch" href="quiz.html">Test Your Knowledge With Quizzes</a>
+    </div>
+    <div id="header">
+      <br /><br /><button
+        id="searchall"
+        class="search"
+        onclick="fetchAllData()"
+      >
+        Search All Countries <i class="fas fa-search"></i></button
+      ><br /><br />
+      <label for="search">Search by country</label>
+      <input
+        type="text"
+        placeholder="Search by Country..."
+        id="search"
+        class="input"
+      />
+
+      <button id="button" class="search" onclick="fetchData()">
+        Search <i class="fas fa-search"></i>
+      </button>
+
+      <br />
+      <button id="filter" onclick="searchbars()">
+        Filtered Searches <i class="fas fa-angle-down"></i>
+      </button>
+
+      <input
+        type="text"
+        placeholder="Search by Region..."
+        id="searchtwo"
+        class="input"
+      />
+      <button id="searchbarstwo" class="search" onclick="fetchRegionData()">
+        Search <i class="fas fa-search"></i>
+      </button>
+      <input
+        type="text"
+        placeholder="Search by Language Code..."
+        id="searchthree"
+        class="input"
+      />
+      <button id="searchbarsthree" class="search" onclick="fetchLanguageData()">
+        Search <i class="fas fa-search"></i>
+      </button>
+      <input
+        type="text"
+        placeholder="Search by Capital City..."
+        id="searchfour"
+        class="input"
+      />
+      <button id="searchbarsfour" class="search" onclick="fetchCapitalData()">
+        Search <i class="fas fa-search"></i></button
+      ><br />
+      <button id="help" class="help" onclick="showLightBox()">
+        <i class="fas fa-question"></i><br /><br />
+      </button>
+      <div id="main"></div>
+      <br /><br />
+      <p id="footer">
+        This script uses a fetch request to get geographical data from a free
+        API called <a href="https://restcountries.eu/">Rest Countries.</a>
+        <br />Icons made by
+        <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26"
+          >Icongeek26</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com</a
+        >
+      </p>
+
+      <a href="#top" id="btn"
+        ><i class="fas fa-arrow-up"></i><br />Back to top</a
+      >
+      <br /><br />
+    </div>
+  </body>
+</html>

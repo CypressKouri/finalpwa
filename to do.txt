@@ -1,0 +1,4 @@
+style quiz.html
+ - resize image for mobile first
+ - border
+make my icon work kfdshjdshflkjshfj

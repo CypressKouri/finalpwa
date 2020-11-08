@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta charset="utf-8" />
+    <title>LearnGeo</title>
+    <link href="https://restcountries.eu/rest/v2/all" rel="preconnect" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#2C8C99" />
+    <!-- include an external style sheet -->
+    <link rel="stylesheet" href="quizstyle.css" />
+    <!-- include an external JavaScript file -->
+    <script src="quizscript.js"></script>
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-startup-image" href="/icons/icon-192x192.png" />
+
+    <meta
+      name="Description"
+      content="A wiki app that allows you to research any country and has a trivia section to test your knowledge."
+    />
+  </head>
+
+  <body onload="initialize()">
+    <div id="lightbox" onclick="closeLightBox()">
+      <div id="message"></div>
+    </div>
+    <div id="startup"></div>
+
+    <div id="title">LearnGeo</div>
+    <div id="subtitle">
+      <a id="switch" href="index.html">LearnGeo Wiki</a>
+    </div>
+    <br />
+    <h1>LearnGeo Trivia</h1>
+    <br />
+    <button class="head" id="instruction" onclick="instruction()">
+      Instructions
+    </button>
+    <p id="inst">
+      <br /><br />Click on the correct answer to proceed to the next question.
+      <br />
+      You have ten seconds to answer each question; the timer will begin as soon
+      as you press the begin quiz button. <br />
+      If you take more than the given time, it will mark the question as
+      incorrect and move onto the next question. <br />Y ou may click "skip
+      question" at the bottom of the page to proceed to the next question.
+      <br /><br />The numbers on the bottom of the screen shows your progress,
+      not your score. <br />Your score and percentage are displayed every time
+      you answer a question. <br /><br />
+    </p>
+    <br />
+    <div class="button_cont" id="begin">
+      <a class="beginbutton" href="#" onclick="fetchData()"
+        >Begin Capital Cities Quiz</a
+      >
+    </div>
+    <div class="grid-container" id="gridcontainer">
+      <div class="header">
+        <div id="question">The Question</div>
+      </div>
+
+      <div class="left">
+        <br />
+        <div>
+          <div class="options" id="a" onclick="markIt('a')">A.</div>
+          <div class="options" id="b" onclick="markIt('b')">B.</div>
+          <div class="options" id="c" onclick="markIt('c')">C.</div>
+          <div class="options" id="d" onclick="markIt('d')">D.</div>
+
+          <br />
+          <div id="countdown"></div>
+          <br />
+        </div>
+      </div>
+
+      <div class="right">
+        <img id="image" src="images/planet-earth.png" alt="planet earth" />
+      </div>
+
+      <div class="footer1">
+        <p id="next" onclick="nextQuestion()">Skip Question</p>
+      </div>
+
+      <div class="footer2">
+        <p id="score">1/245</p>
+      </div>
+
+      <div class="footer3">
+        <p id="footer">
+          This script uses a fetch request to get geographical data from a free
+          API called <a href="https://restcountries.eu/">Rest Countries.</a>
+          <br />Icons made by
+          <a
+            href="https://www.flaticon.com/authors/icongeek26"
+            title="Icongeek26"
+            >Icongeek26</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+      <div class="left">
+        <br />
+        <div>
+          <div class="options" id="a" onclick="markIt('a')">A.</div>
+          <div class="options" id="b" onclick="markIt('b')">B.</div>
+          <div class="options" id="c" onclick="markIt('c')">C.</div>
+          <div class="options" id="d" onclick="markIt('d')">D.</div>
+
+          <br />
+          <div id="countdown"></div>
+          <br />
+        </div>
+      </div>
+
+      <div class="right">
+        <img id="image" src="images/planet-earth.png" alt="planet earth" />
+      </div>
+
+      <div class="footer1">
+        <p id="next" onclick="nextQuestion()">Skip Question</p>
+      </div>
+
+      <div class="footer2">
+        <p id="score">1/245</p>
+      </div>
+
+      <div class="footer3">
+        <p id="footer">
+          This script uses a fetch request to get geographical data from a free
+          API called <a href="https://restcountries.eu/">Rest Countries.</a>
+          <br />Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
